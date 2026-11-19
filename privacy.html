@@ -18,7 +18,7 @@
 <p class="muted">Last updated: 19 November 2026</p>
 
 <div class="card">
-  <p><strong>In short:</strong> your car data stays on your iPhone. CarWallet has no accounts, no analytics, no ads and no tracking. We can't see your fill-ups, costs or cars. Our server keeps only a random app number, whether you have Pro, and how often you used features like toll prices this month.</p>
+  <p><strong>In short:</strong> your car data stays on your iPhone. CarWallet has no accounts, no analytics, no ads and no tracking. We can't see your fill-ups, costs or cars. If you use toll prices (Pro), our server keeps only a random app number, your Pro plan and how many toll lookups you did this month.</p>
 </div>
 
 <h2>Who we are</h2>
@@ -46,16 +46,16 @@
 <p>The Trip tab can use your current location as the start of a trip you plan, only while you use the app and only if you allow it. To find addresses and routes, the start and destination are sent to Apple Maps (Apple's MapKit), under <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>. The app remembers only your last destination, on your iPhone. You can type a start address instead of sharing your location.</p>
 
 <h2>Our server</h2>
-<p>CarWallet has a small server of its own (carwallet-backend). It is used by every copy of the app, free and Pro, for features that can't run on your iPhone, such as toll prices.</p>
+<p>CarWallet has a small server of its own (carwallet-backend) for features that can't run on your iPhone. Today the app contacts it only when you look up a toll price (Pro) or delete your server data. Free users who don't use those send nothing.</p>
 <ul>
-  <li><strong>When you first open the app</strong> (and about once a month after that), it sends the record Apple signs to prove the app came from the App Store, and, if you have Pro, Apple's signed record of your Pro purchase.</li>
+  <li><strong>The first time</strong> (and about once a month after that, or when your Pro status changes), the app sends the record Apple signs to prove the app came from the App Store, and Apple's signed record of your Pro purchase.</li>
   <li><strong>What the server keeps:</strong>
     <ul>
       <li>The app number from Apple's record (a random number Apple gives your Apple Account for this app; it contains no name, email or Apple ID), the date it was first seen, and whether it came from the App Store or a test build.</li>
       <li>Your Pro status: which plan (monthly, yearly or lifetime), when it ends, Apple's number for the original purchase, and whether it was refunded.</li>
       <li>Usage counters per month and feature (for example "12 toll lookups in November"), so one user can't use up the shared allowance.</li>
     </ul>
-    These are kept while you use the app. You can ask us to delete them (see "Your rights").</li>
+    These are kept until you delete them: <strong>Settings → About → Delete Server Data</strong> in the app (see "Your rights").</li>
   <li><strong>Toll prices (Pro):</strong> points along the route (start, destination and a few points in between) and the app currency go to our server, which passes the route points to <a href="https://legal.here.com/en-gb/privacy">HERE Technologies</a> to calculate the price. The route is not stored. HERE does not receive your app number or purchase details. Free users never send a route.</li>
   <li><strong>Logs:</strong> the server writes short technical logs (errors and counts) to help us fix problems. They never contain your route, your sign-in token or your full app number (at most its first 6 characters), and are deleted after about 3 days. Your IP address is seen by the server to answer a request; we don't store it, but Cloudflare's logs, kept for the same few days, may contain technical request details.</li>
   <li><strong>Why, and on what legal basis:</strong> to give you the features and the Pro service you asked for (GDPR Art. 6(1)(b), performance of a contract), and to prevent abuse and keep the service running (Art. 6(1)(f), legitimate interest).</li>
@@ -69,7 +69,7 @@
 <p>Settings → Data → Export Data makes a file with your data on your iPhone. It goes only where you send it (Files, AirDrop, Mail and so on).</p>
 
 <h2>Your rights</h2>
-<p>Under the GDPR you may ask what data we hold about you, and ask us to correct or delete it. For almost everything, the answer is on your own iPhone: delete an entry, or delete the app. To have your record on our server deleted (app number, Pro status and counters), email us. Because it holds no name or email, we may ask for details that help us find yours, such as the date and plan of your Pro purchase. Questions are welcome by email. You can also complain to the Dutch data protection authority, the <a href="https://autoriteitpersoonsgegevens.nl/en">Autoriteit Persoonsgegevens</a>.</p>
+<p>Under the GDPR you may ask what data we hold about you, and ask us to correct or delete it. For almost everything, the answer is on your own iPhone: delete an entry, or delete the app. To delete your record on our server (app number, Pro status and counters), open <strong>Settings → About → Delete Server Data</strong> in the app. Your entries on your iPhone and your Pro purchase stay. If you no longer have the app, email us; because the record holds no name or email, we may ask for the date and plan of your Pro purchase to find it. Questions are welcome by email. You can also complain to the Dutch data protection authority, the <a href="https://autoriteitpersoonsgegevens.nl/en">Autoriteit Persoonsgegevens</a>.</p>
 
 <h2>Children</h2>
 <p>CarWallet is not aimed at children and does not knowingly collect data from them.</p>
